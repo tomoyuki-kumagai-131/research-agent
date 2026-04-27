@@ -5,11 +5,16 @@ steps:
       - -f
       - apps/api/Dockerfile
       - -t
-      - ${_IMAGE}
+      - asia-northeast1-docker.pkg.dev/$PROJECT_ID/research-agent/api:$SHORT_SHA
+      - -t
+      - asia-northeast1-docker.pkg.dev/$PROJECT_ID/research-agent/api:latest
       - .
 
   - name: gcr.io/cloud-builders/docker
-    args: ["push", "${_IMAGE}"]
+    args:
+      - push
+      - --all-tags
+      - asia-northeast1-docker.pkg.dev/$PROJECT_ID/research-agent/api
 
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: gcloud
@@ -17,8 +22,8 @@ steps:
       - run
       - deploy
       - research-agent-api
-      - --image=${_IMAGE}
-      - --region=${_REGION}
+      - --image=asia-northeast1-docker.pkg.dev/$PROJECT_ID/research-agent/api:$SHORT_SHA
+      - --region=$_REGION
       - --platform=managed
       - --allow-unauthenticated
       - --memory=1Gi
@@ -31,7 +36,6 @@ steps:
 
 substitutions:
   _REGION: asia-northeast1
-  _IMAGE: asia-northeast1-docker.pkg.dev/${PROJECT_ID}/research-agent/api:latest
 
 options:
   logging: CLOUD_LOGGING_ONLY
