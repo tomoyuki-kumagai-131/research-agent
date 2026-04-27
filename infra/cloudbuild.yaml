@@ -21,8 +21,13 @@ steps:
       - --region=${_REGION}
       - --platform=managed
       - --allow-unauthenticated
-      - --set-secrets=DIFY_API_KEY=DIFY_API_KEY:latest,OPENAI_API_KEY=OPENAI_API_KEY:latest
-      - --set-env-vars=DIFY_API_BASE=https://api.dify.ai/v1
+      - --memory=1Gi
+      - --cpu=1
+      - --timeout=300
+      - --concurrency=10
+      - --max-instances=3
+      - --set-secrets=OPENAI_API_KEY=OPENAI_API_KEY:latest,DIFY_API_KEY=DIFY_API_KEY:latest
+      - --set-env-vars=DIFY_API_BASE=https://api.dify.ai/v1,NODE_ENV=production
 
 substitutions:
   _REGION: asia-northeast1
@@ -30,3 +35,5 @@ substitutions:
 
 options:
   logging: CLOUD_LOGGING_ONLY
+  machineType: E2_HIGHCPU_8
+timeout: 1800s
