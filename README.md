@@ -5,7 +5,8 @@ TypeScript フルスタック AI アプリのポートフォリオ。
 
 
 
-https://github.com/user-attachments/assets/28234dc0-8359-4278-b99d-d81d945b2f7e
+https://github.com/user-attachments/assets/61f70185-b922-4fba-8a0a-c485c6fea2bf
+
 
 
 
