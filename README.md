@@ -3,6 +3,12 @@
 TypeScript フルスタック AI アプリのポートフォリオ。
 業務リサーチを自動化するエージェント。
 
+
+
+https://github.com/user-attachments/assets/28234dc0-8359-4278-b99d-d81d945b2f7e
+
+
+
 ## スタック
 
 - **FE**: Next.js (App Router) + Vercel AI SDK (`useChat`)
