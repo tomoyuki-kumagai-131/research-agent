@@ -1,0 +1,22 @@
+{
+  "name": "@research-agent/agents",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.0.0",
+    "@mastra/core": "^0.10.0",
+    "@research-agent/dify": "workspace:*",
+    "@research-agent/shared": "workspace:*",
+    "playwright": "^1.48.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
