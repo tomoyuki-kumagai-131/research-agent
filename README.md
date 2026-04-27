@@ -3,7 +3,7 @@
 > 業務リサーチを自動化する TypeScript フルスタック AI エージェントのポートフォリオ。
 > 社内ナレッジ (RAG) → Web 検索 → ブラウザ自動化を 1 つの会話で横断します。
 
-🌐 **Live demo**: https://research-agent-web.vercel.app
+🌐 **Live**: https://research-agent-web.vercel.app
 
 https://github.com/user-attachments/assets/61f70185-b922-4fba-8a0a-c485c6fea2bf
 
